@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissor</title>
+    </head>
+    <body>
+
+        <p>Lets play!</p>
+
+
+    <div class="button-container">
+        <button class="rock" onclick="
+            const randomNumber = Math.random()
+            let ComputerMove = '';
+
+            if (randomNumber>=0 && randomNumber < 1/3){
+                ComputerMove = 'rock';
+                alert(`Computer chose rock🪨, its a tie`)
+            }else if (randomNumber>=1/3 && randomNumber < 2/3){
+                ComputerMove = 'paper';
+                alert(`Computer chose paper📄, You Lose!`)
+            }else if(randomNumber >= 2/3 && randomNumber <1){
+                ComputerMove = 'Scissor';
+                alert(`the Computer chose Scissor✂️, You win!`)
+            }
+            ">Rock
+        </button>
+
+
+
+        <button class="paper" onclick="
+            const randomNumber1 = Math.random()
+            let ComputerMove1 = '';
+
+            if (randomNumber1>=0 && randomNumber1 < 1/3){
+                ComputerMove1 = 'rock';
+                alert(`Computer chose rock🪨, You win!`)
+            }else if (randomNumber1>=1/3 && randomNumber1 < 2/3){
+                ComputerMove1 = 'paper';
+                alert(`Computer chose paper📄, its a tie`)
+            }else if(randomNumber1 >= 2/3 && randomNumber1 <1){
+                ComputerMove1 = 'Scissor';
+                alert(`the Computer chose Scissor✂️, You Lose`)
+            }
+            ">Paper
+        </button>
+
+
+
+        <button class="scissorsz" onclick="
+            const randomNumber2 = Math.random()
+            let ComputerMove2 = '';
+
+            if (randomNumber2>=0 && randomNumber2 < 1/3){
+                ComputerMove2 = 'rock';
+                alert(`Computer chose rock🪨, You Lose`)
+            }else if (randomNumber2>=1/3 && randomNumber2 < 2/3){
+                ComputerMove2 = 'paper';
+                alert(`Computer chose paper📄,You Win`)
+            }else if(randomNumber2 >= 2/3 && randomNumber2 <1){
+                ComputerMove2 = 'Scissor';
+                alert(`the Computer chose Scissor✂️, Its a tie`)
+            }
+            ">Scissors
+        </button>
+    </div>
+
+
+
+    </body>
+
+<style>
+
+html{
+background-color: whitesmoke;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.rock::before {
+  content: "🪨 ";
+}
+
+button.paper::before {
+  content: "📄 ";
+}
+
+button.scissors::before {
+  content: "✂️ ";
+}
+
+p {
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Arial' italic;
+  font-size: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+</style>
+</html>
